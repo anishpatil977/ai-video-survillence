@@ -16,7 +16,7 @@ video.hide();
 function start(){
 
 objectDetector=ml5.objectDetector('cocossd' ,modelLoaded);
-document.getElementById("status").innerHTML="status:detectingobjects";
+document.getElementById("Status").innerHTML="status:detectingobjects";
 
 
 }
@@ -51,7 +51,7 @@ objectDetector.detect(video,gotResult);
 for(i=0; i<objects.length; i++){
 
 document.getElementById("status").innerHTML="status:objectDetected";
-document.getElementById("number_of_objects").innerHTML="Number of objects detected are :"+objects.length;
+document.getElementById("numberofobjects").innerHTML="Number of objects detected are:"+objects.length;
 
 fill("#1c9432");
 percent=floor(objects[i].confidence*100);
